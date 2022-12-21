@@ -24,10 +24,12 @@ return require('packer').startup(function(use)
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
     --    use("rebelot/heirline.nvim")
-    use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" }
-    use {"akinsho/toggleterm.nvim", tag = "*", config = function()
+    use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = "nvim-tree/nvim-web-devicons", config = function()
+        require("bufferline").setup {}
+    end }
+    use { "akinsho/toggleterm.nvim", tag = "*", config = function()
         require("toggleterm").setup()
-    end}
+    end }
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
