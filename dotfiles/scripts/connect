@@ -1,0 +1,52 @@
+#!/bin/bash
+
+help()
+{
+  echo "
+█▀▀ █▀█ █▄░█ █▄░█ █▀▀ █▀▀ ▀█▀ ▀█ █░█░█ █ █▀▀ █
+█▄▄ █▄█ █░▀█ █░▀█ ██▄ █▄▄ ░█░ █▄ ▀▄▀▄▀ █ █▀░ █"
+  echo "A simple wifi connection tool that uses nmcli under the hood"
+  printf "\n\nUsage: connect [ -n | --name ] : Name of the connection
+               [ -c | --conn ] : Connection type => up | down"
+  exit 0
+}
+
+if [[ -z $1 ]]; then
+  help
+fi
+
+
+# echo "$1"
+# echo "$2"
+#
+# echo $@
+# echo $#
+# echo $*
+
+# if [[ -z $1 ]];
+# then
+#   echo "value is: $1"
+#   DEFAULT_WIFI=$(nmcli c | awk 'length($1) == 1' | awk 'NR==1{print $2}')
+#   connected=$(nmcli c up $DEFAULT_WIFI)
+#   notify-send "${connected}"
+# else
+#   echo "Specify the wifi name"
+# fi
+  
+  
+
+# WIFI_NAME_LENGTH=$1
+#
+# case WIFI_NAME_LENGTH in
+#   0)
+#     DEFAULT_WIFI=$(nmcli c | awk 'length($1) == 1' | awk 'NR==1{print $2}')
+#     connected=$(nmcli c $2 $DEFAULT_WIFI)
+#     notify-send "${connected}"
+#     ;;
+#   *)
+#     echo $2
+#     echo $WIFI_NAME_LENGTH
+#     # DEFAULT_WIFI=$(nmcli c | awk 'length($1) == 1' | awk 'NR==1{print $2}')
+#     # connected=$(nmcli c $1 $DEFAULT_WIFI)
+#     ;;
+# esac

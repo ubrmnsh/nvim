@@ -1,0 +1,5 @@
+wifi_uuid=$(nmcli -g uuid c | awk 'NR==1{print $1}')
+
+msg=$(nmcli c up $wifi_uuid)
+
+notify-send "${msg}"
